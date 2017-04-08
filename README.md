@@ -104,12 +104,12 @@ So far, the following argument tokens are supported (the above invoking text is 
   - all the arguments
   - `hello world I’m here where are you?`
 * {*n*}
-  - number *n* represents the position of the argument
+  - number *n* represents the position of the component
   - negative positions mean ones in the opposite direction
   - {4} means `here`
-  - {-2} means the last second argument thus equals to {4} in the example
+  - {-2} means the last second component thus equals to {4} in the example
 * {*n*,*m*}
-  - arguments in range from poistion *n* through *m*
+  - components in range from poistion *n* through *m*
   - negative positions are supported too
   - if *n* is omitted, it is filled by the beginning
   - if *m* is omitted, it is filled by the end
@@ -120,9 +120,15 @@ So far, the following argument tokens are supported (the above invoking text is 
   - {2,1} will be empty since it is invalid
 * {*name*}
   - the named argument
-  - it represents the argument immediate following the first component *name*
+  - it represents the argument immediate following the first *name* component 
   - if no matching *name* component, it will be empty
+  - the keyword will never be counted as the *name* component
   - {world} means `I'm`
+  - {kw} will be empty
+* {!*name*}
+  - all arguments except for the named argument part
+  - the *name* component and its immediate follower will be excluded
+  - {!I'm} means `hello world where are you?`
 * others
   - will be interpreted as empty strings
 
