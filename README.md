@@ -1,5 +1,8 @@
 # Locu Help
-Locu is an iOS app that helps with opening your daily URLs in a more flexible and faster way. Following is the detailed help information for it.
+Locu is an iOS app that helps with opening your daily URLs in a more flexible and faster way. 
+[![App Store Badge](https://cdn.rawgit.com/terrychou/locu/master/Download_on_the_App_Store_Badge_en_135x40.svg)](https://itunes.apple.com/us/app/locu/id1224884506?ls=1&mt=8)
+
+Following is the detailed help information for it.
 
 ## An example
 Say you want to search in Google, with a preferred language for the resulting pages.
@@ -223,3 +226,6 @@ Besides typing invoking texts within Locu, there are some other ways to utilize 
 
 ## Double spaces
 In the search bar, if you type double spaces immediate following the keyword, Locu will replace the current keyword with the topmost command's.
+
+## Contact
+If you have any issues, suggestions or requests, please contact [@jixiewu](https://twitter.com/jixiewu)
