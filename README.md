@@ -1,5 +1,6 @@
 # Locu Help
 Locu is an iOS app that helps with opening your daily URLs in a more flexible and faster way. 
+
 [![App Store Badge](https://cdn.rawgit.com/terrychou/locu/master/Download_on_the_App_Store_Badge_en_135x40.svg)](https://itunes.apple.com/us/app/locu/id1224884506?ls=1&mt=8)
 
 Following is the detailed help information for it.
