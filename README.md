@@ -138,7 +138,9 @@ So far, the following argument tokens are supported (the above invoking text is 
 
 When the argument tokens are used in URLs, they need to be percent escaped to ensure the URL's validity.
 
-The URL escaping attributes can be added by appending them with a colon (`:Q` part in `{,-2:Q}`).
+Locu is smart enough to do this for you (since version 1.2). It will figure out the URL component to which each token belongs, and do the escaping automatically when the command is being launched.
+
+However, you can still indicate the escaping explicitly when it is necessary. The URL escaping attributes can be added within a token by appending them with a colon (`:Q` part in `{,-2:Q}`).
 
 The following attributes are supported:
 * H
@@ -159,9 +161,15 @@ The following attributes are supported:
 * PW
   - for the URL password
   - `http://user:{pwd:PW}@www.abc.com`
+* NA
+  - do not escape
+  - some components, such as scheme and port, inherently don't need escaping
+  - `{2:NA}://www.abc.com`
 * when omitted, it escapes for query part by default
   - `http://www.abc.com/search?q={@}`
 * argument tokens don't need percent escaping when used in description
+
+NOTE: Locu stops doing the automatic escaping whenever any of the tokens contains an explicit escaping attribute.
 
 ## Invoking history
 Locu will maintain a history list recording every invoking text that has been invoked.
